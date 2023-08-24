@@ -3,9 +3,9 @@ import mongoose from "mongoose";
 async function connectMongoose() {
     // Einstellungen, um mit Atlas mongoDB zu verbinden
   const _pwd = process.env.MONGO_DB_PWD;
-  const _database = "books";//changer Database Name
-  const _user= "stephanie"; // kann bleiben
-  const _cluster = "cluster0.bizkhzy.mongodb.net"; // changer prendre celui commun
+  const _database = "Tiere";
+  const _user= process.env.MONGO_DB_USER 
+  const _cluster = "cluster0.bizkhzy.mongodb.net"; 
 
   const _uri = `mongodb+srv://${_user}:${_pwd}@${_cluster}/${_database}?retryWrites=true&w=majority`;
   try {

@@ -1,8 +1,8 @@
 import express from "express";
 import { connectMongoose } from "./util/connectMongoose.js";
 import "dotenv/config";// import dotenv from "dotenv";
-import petsRouter from "./router/petsRouter.js";// a changer le nom par ex tierRegisterRouter
-import raceRouter from "./router/raceRouter.js"; // a changer le nom par ex raceInfoRouter 
+import petsRouter from "./router/petsRouter.js";
+import raceRouter from "./router/raceRouter.js"; 
 // import jwt from "jsonwebtoken";
 
 
@@ -15,8 +15,8 @@ const connected = await connectMongoose();
 
 app.use(express.json())
 
-app.use(petsRouter) // a changer le nom
-app.use(raceRouter) // a changer le nom
+app.use(petsRouter) 
+app.use(raceRouter) 
 
 
 if(connected){
