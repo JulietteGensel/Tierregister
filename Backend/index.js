@@ -1,8 +1,8 @@
 import express from "express";
 import { connectMongoose } from "./util/connectMongoose.js";
-import "dotenv/config";
+import "dotenv/config";// import dotenv from "dotenv";
 import petsRouter from "./router/petsRouter.js";
-import raceRouter from "./router/raceRouter.js"; 
+import raceRouter from "./router/raceRouter.js";  
 // import jwt from "jsonwebtoken";
 
 //dotenv.config()

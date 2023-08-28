@@ -2,8 +2,8 @@ import mongoose from "mongoose";
 
 const petSchema = new mongoose.Schema({
     name: String,
-    animal: String,
-    breed: { type: mongoose.Schema.Types.ObjectId, ref: 'Races' },
+    animal:String,
+    breed: { type: mongoose.Schema.Types.ObjectId, ref: 'Race' },
     age: Number,
     // Weitere Felder hier...
   });
