@@ -4,7 +4,7 @@ import { createRace, deleteRace, getRaces, updateRace } from "../controller/race
 const raceRouter = new Router;
 
 raceRouter
-    .post("/races/:id", createRace) // changer de route si sa derange
+    .post("/races", createRace) // changer de route si sa derange
     .get("/races", getRaces)
     .patch("/races/:id", updateRace)
     .delete("/races/:id", deleteRace)
