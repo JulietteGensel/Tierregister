@@ -5,7 +5,6 @@ import petsRouter from "./router/petsRouter.js";
 import raceRouter from "./router/raceRouter.js";  
 // import jwt from "jsonwebtoken";
 
-
 //dotenv.config()
 const PORT = process.env.PORT || 5000;
 
