@@ -73,7 +73,7 @@ export const deletePets = async (req, res) => {
     const petId = req.params.id; 
     try {
         const deletePets = await PetModel.findByIdAndDelete(petId, req.body);
-        res.send("table deleted",deletePets);
+        res.send("table deleted");
     } catch(error) {
         console.error(error);
     }
