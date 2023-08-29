@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 function PetForm() {
   const [pet, setPet] = useState({});
+  
   const navigate = useNavigate();
   const changePetHandler = (key, value) => {
     setPet((prevState) => {
@@ -28,7 +29,7 @@ function PetForm() {
     <form>
       <label>Name</label> <input value={pet.name} onChange={(event) => changePetHandler("name", event.target.value)} />
       <label>Animal</label> <input value={pet.animal} onChange={(event) => changePetHandler("animal", event.target.value)} />
-      <label>Breed</label> <select name="breed"  onChange={(event) => changePetHandler("breedId", event.target.value)}>
+      <label>Breed</label> <select name="breed"  onChange={(event) => changePetHandler("breedId", event.target.value)}> 
         <option value="DOGID" >dog</option> {/* Hier muss die id aus der datanbank rein*/}
         <option value="64e749aa4879971a91ef45fb"> cat</option>
         </select>
