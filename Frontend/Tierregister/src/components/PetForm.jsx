@@ -32,7 +32,6 @@ function PetForm() {
   return (
     <form>
       <label>Name</label> <input value={pet.name} onChange={(event) => changePetHandler("name", event.target.value)} />
-      <label>Animal</label> <input value={pet.animal} onChange={(event) => changePetHandler("animal", event.target.value)} />
       <label>Breed</label> <input value={pet.breed} onChange={(event) => changePetHandler("breed", event.target.value)} />
       <label>Age</label> <input value={pet.age} onChange={(event) => changePetHandler("age", event.target.value)} />
       <button onClick={(event) => submitHandler(event)}>Submit</button>
