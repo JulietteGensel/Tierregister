@@ -30,9 +30,20 @@ export const getPets = async (req, res) => {
     }
 }*/
 
-
-
 export const createPet = async (req, res) => {
+    const petData = req.body;
+    const pet = new PetModel(petData);
+    try {
+      await pet.save();
+      res.send("Pet gespeichert");
+    } catch (error) {
+      console.error(error);
+      res.status(500).send("Fehler beim Speichern des Haustiers");
+    }
+  };
+  
+
+export const createPetId = async (req, res) => {
     const petData = req.body; // {name: "Bello", type: "dog" }
     const raceId = req.params.id; // Oder woher man die ID für die Rasse halt sonst kriegen will. 
     petData.breed = raceId;  // {name: "Bello", type: "dog", breed: "64ad1a4bc730d0bbd635ec35"}
